@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Tip Caluclator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Simple Tip Calculator</h1>
+        <p id="description">This is a very short explanation</p>
+      </header>
+      <form id="tip-calculator">
+        <div class="form_wrap">
+            <label for="billamt">Bill Amount:</label>
+            <input type="text" id="billamt" name="billamt" oninput="calculateTip(vol.value, this.value)"class="custom-input">
+        </div>
+        <div class="form_wrap">
+            <label for="vol">Tip Amount:</label>
+            <input type="range" id="vol" name="vol" min="0" max="100"
+              value="0" class="custom-slider" oninput="calculateTip(this.value, billamt.value)">
+        </div>
+        <div class="form_wrap">
+            <label for="tipperct">Tip Percentage:</label>
+            <input type="text" id="tipperct" name="tipperct" class="custom-input" disabled>
+        </div>
+        <div class="form_wrap">
+            <label for="tipamt">Tip Amount:</label>
+            <input type="text" id="tipamt" name="tipamt" class="custom-input" disabled>
+        </div>
+        <div class="form_wrap">
+            <label for="totalamt">Total:</label>
+            <input type="text" id="totalamt" name="totalamt" class="custom-input" disabled>
+        </div>
+      </form>
+    </div> 
+
+   <script src="js/app.js"></script>
+
+</body>
+
+</html>
